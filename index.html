@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>developershehzad.com</title>
+    <link rel="icon" href="pic 1.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0; /* Add a background color */
+        }
+
+        #im {
+            width: 100%;
+            height: auto;
+            position: absolute;
+        }
+
+        @media screen and (max-width: 600px) {
+            #im {
+                height: 100%;
+            }
+
+            #firstflex {
+                padding: 10px; /* Adjust padding for smaller screens */
+            }
+
+            #intro {
+                max-width: 100%; /* Make the text full width on smaller screens */
+                text-align: center;
+            }
+        }
+
+        /* navbar */
+        #nav {
+            position: absolute;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .nav-list {
+            list-style-type: none;
+            margin: 0;
+            padding: 10px;
+            overflow: hidden;
+            cursor: pointer;
+            
+            
+        }
+
+        .nav-list li {
+            float: left;
+        }
+
+        .nav-list li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .nav-list li a:hover {
+            color: rgb(3, 6, 177);
+        }
+
+        .menu-icon {
+            display: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width: 600px) {
+            .nav-list {
+                display: none;
+                background-color: aqua;
+            }
+
+            .menu-icon {
+                display: block;
+            }
+
+            .menu-icon:hover {
+                /* background-color: #555; */
+            }
+        }
+
+        #firstflex {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px; /* Adjust padding for larger screens */
+            position: absolute;
+            z-index: 0;
+            /* background-color: blue; */
+        }
+
+        #intro {
+            text-align: center;
+            color: white;
+            max-width: 80%; /* Adjust max-width for larger screens */
+            margin: 0 auto; /* Center the content */
+        }
+        #intro p i{
+            background-color: aqua;
+            color: black;
+        }
+
+        #ime {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+
+        @media screen and (min-width: 600px) {
+            #firstflex {
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+            }
+
+            #intro {
+                max-width: 50%;
+                text-align: left;
+            }
+
+            #ime {
+                max-width: 40%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <img id="im" src="one.png" alt="">
+    <nav id="nav">
+        <div class="menu-icon">&#9776;</div>
+        <ul class="nav-list">
+            <li>
+                <a href="#">ABOUT ME</a>
+            </li>
+            <li>
+                <a href="#">EDUCATION</a>
+            </li>
+            <li>
+                <a href="#">EXPERIENCE</a>
+            </li>
+            <li>
+                <a href="#">PROJECT</a>
+            </li>
+            <li>
+                <a href="#">CONTACT</a>
+            </li>
+        </ul>
+    </nav>
+    <div id="firstflex">
+        <div id="intro">
+            <h1>I'm Developer Shehzad</h1>
+            <p><i>PROFESSIONAL WEBSITE DEVELOPER & GRAPHICS DESIGNER</i></p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis sed optio recusandae asperiores omnis
+                consequatur quas, dolores placeat. Fuga labore mollitia illo quia! Veniam alias obcaecati aut nostrum,
+                dolores minus.</p>
+        </div>
+        <img id="ime" src="pic 1.png" alt="">
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuIcon = document.querySelector('.menu-icon');
+            const navList = document.querySelector('.nav-list');
+
+            menuIcon.addEventListener('click', function () {
+                navList.style.display = (navList.style.display === 'block') ? 'none' : 'block';
+            });
+        });
+
+    </script>
+</body>
+
+</html>
